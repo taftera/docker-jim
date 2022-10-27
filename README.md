@@ -1,4 +1,18 @@
-# Wordpress Docker
+# LAMP + Python3.7 Docker
+
+---
+#JIM
+- Instala docker en [mac](https://docs.docker.com/desktop/install/mac-install/) o si está en otra plataforma revisa que tengas los comandos ``` $ docker version ``` y ``` $docker-compose version ``` 
+- Revisa el docker-compose.yml 
+- Actualiza las claves del environment de mysql (lineas 23-24)
+- En consola:
+- ``` $ docker-compose up -d --build ```
+- Una vez que baje todo y este corriendo
+- ``` $ docker-compose ps ```
+- para ver los puertos donde todo está funcionando
+- Wordpress debe entrar solo poniendo localhost en el browser o con el puerto asignado de en el ``` $ docker-compose ps ```
+- Para python utiliza la entrada de docker commands (linea 84).
+---
 
 ## Docker
 
@@ -71,7 +85,9 @@ $ mkcert wordpress-docker.test
 # list images
 $ docker image ls --all
 # explore image
+# note: if there are 2 images w/ same name use the TAG
 $ docker run -it image_name sh
+$ docker run -it image_name:tag sh
 # NGINX ❯ nginx.conf to increase the size of uploads
 $ docker cp docker-wordpress_nginx_1:/etc/nginx/nginx.conf ./nginx/
 # PHP ❯ get php.ini
