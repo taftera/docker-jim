@@ -1,7 +1,7 @@
 # LAMP + Python3.7 Docker
 
 ---
-#JIM
+# JIM
 - Instala docker en [mac](https://docs.docker.com/desktop/install/mac-install/) o si está en otra plataforma revisa que tengas los comandos ``` $ docker version ``` y ``` $docker-compose version ``` 
 - Revisa el docker-compose.yml 
 - Actualiza las claves del environment de mysql (lineas 23-24)
